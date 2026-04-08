@@ -2,19 +2,11 @@ version = 1
 revision = 1
 
 [[package]]
-name = "email-triage-openenv"
+name = "email-triage-env"
 version = "0.1.0"
 source = { virtual = "." }
-last-built = "2026-04-08T17:30:00Z"
-
-[[package]]
-name = "fastapi"
-version = "0.109.0"
-
-[[package]]
-name = "openenv"
-version = "1.0.0"
-
-[[package]]
-name = "uvicorn"
-version = "0.27.0"
+dependencies = [
+    { name = "fastapi" },
+    { name = "openenv" },
+    { name = "uvicorn" },
+]
