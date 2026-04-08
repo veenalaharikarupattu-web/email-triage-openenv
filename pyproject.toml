@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "email-triage-openenv"
 version = "0.1.0"
-description = "Email Triage RL Environment"
+description = "Professional Email Triage RL Environment"
 dependencies = [
     "openenv",
     "pydantic",
@@ -15,7 +15,6 @@ dependencies = [
     "requests"
 ]
 
-# This satisfies the "Missing [project.scripts]" error
 [project.scripts]
 server = "server.app:app"
 
