@@ -1,0 +1,5 @@
+name: "email-triage-pro"
+version: "1.0.0"
+description: "A professional email triage environment for testing agentic workflows."
+category: "workflow"
+tags: ["openenv", "meta-hackathon", "email-triage"]

@@ -1,0 +1,15 @@
+FROM python:3.10-slim
+
+WORKDIR /app
+
+# Install dependencies
+RUN pip install --no-cache-dir openenv pydantic uvicorn fastapi
+
+# Copy all files from your folder to the container
+COPY . .
+
+# Expose the port Hugging Face uses
+EXPOSE 7860
+
+# Run the app using uvicorn
+CMD ["uvicorn", "app:app", "--host", "0.0.0.0", "--port", "7860"]
