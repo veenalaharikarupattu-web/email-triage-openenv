@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "email-triage-openenv"
+version = "0.1.0"
+description = "Email Triage RL Environment for Scaler X Meta Hackathon"
+dependencies = [
+    "openenv",
+    "pydantic",
+    "uvicorn",
+    "fastapi",
+    "openai",
+    "requests"
+]
+
+[tool.setuptools]
+packages = ["."]
