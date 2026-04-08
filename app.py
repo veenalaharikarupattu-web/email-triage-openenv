@@ -1,5 +1,5 @@
-import uvicorn
 from fastapi import FastAPI
+import uvicorn
 from env import EmailTriageEnv
 
 app = FastAPI()
@@ -7,11 +7,10 @@ env = EmailTriageEnv()
 
 @app.get("/")
 def home():
-    return {"status": "OpenEnv Email Triage is Running"}
+    return {"status": "Running", "info": "Scaler X Meta Round 1"}
 
 @app.post("/step")
 def step(action: dict):
-    # This connects the OpenEnv logic to the web
     obs, reward, done, info = env.step(action)
     return {"observation": obs, "reward": reward, "done": done}
 
