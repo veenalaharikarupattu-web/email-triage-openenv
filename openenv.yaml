@@ -1,5 +1,24 @@
-name: "email-triage-pro"
-version: "1.0.0"
-description: "A professional email triage environment for testing agentic workflows."
-category: "workflow"
-tags: ["openenv", "meta-hackathon", "email-triage"]
+version: "1.0"
+name: "email-triage-env"
+description: "AI Agent environment for professional email prioritization"
+type: "text-categorization"
+
+# Definition of what the agent sees
+observation_space:
+  unread_count: "int"
+  emails: "list[dict]"
+  current_status: "string"
+
+# Definition of what the agent can do
+action_space:
+  email_id: "int"
+  category: "string" # Options: Urgent, Action Required, Personal, Spam
+
+# Difficulty tiers for the hackathon
+tasks:
+  - id: "easy_triage"
+    difficulty: "low"
+  - id: "medium_triage"
+    difficulty: "medium"
+  - id: "hard_triage"
+    difficulty: "high"
